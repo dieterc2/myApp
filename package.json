@@ -4,7 +4,7 @@
   "description": "web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "webpack-dev-server --hot"
   },
   "author": "chris dieter",
   "license": "ISC",
@@ -23,6 +23,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "devDependencies": {
-    "babel-preset-airbnb": "^2.1.1"
+    "babel-preset-airbnb": "^2.1.1",
+    "babel-preset-react": "^6.16.0"
   }
 }
