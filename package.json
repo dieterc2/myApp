@@ -4,7 +4,7 @@
   "description": "web app",
   "main": "index.js",
   "scripts": {
-      "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot"
   },
   "author": "chris dieter",
   "license": "ISC",
@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "babel-preset-airbnb": "^2.1.1",
-    "babel-preset-react": "^6.16.0"
+    "babel-preset-react": "^6.16.0",
+    "react-materialize": "^0.17.2",
+    "react-router": "^3.0.0"
   }
 }
