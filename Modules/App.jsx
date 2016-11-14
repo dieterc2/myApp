@@ -17,8 +17,7 @@ class Header extends React.Component {
     return (
       <div>
         <Navbar brand='TuckFrump' right>
-          <NavItem href='get-started.html'>Getting started</NavItem>
-          <NavItem href='components.html'>Components</NavItem>
+          <NavItem href='/#/About'>About</NavItem>
         </Navbar>
       </div>
     );
