@@ -16,7 +16,7 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar brand='TuckFrump' right>
+        <Navbar brand='TuckFrumpone' right>
           <NavItem href='/#/About'>About</NavItem>
         </Navbar>
       </div>

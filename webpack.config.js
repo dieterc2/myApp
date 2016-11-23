@@ -1,9 +1,13 @@
+var path = require('path');
+var webpack = require('webpack');
+
 var config = {
    entry: './main.js',
 
    output: {
-      path:'./',
+      path: path.join(__dirname, '/'),
       filename: 'index.js',
+      publicPath: '/'
    },
 
    devServer: {
