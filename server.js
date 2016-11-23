@@ -1,4 +1,5 @@
 const path = require('path');
+require('dotenv').config();
 const express = require('express');
 const webpack = require('webpack');
 const webpackMiddleware = require('webpack-dev-middleware');
@@ -7,13 +8,17 @@ const config = require('./webpack.config.js');
 const historyApiFallback = require('connect-history-api-fallback');
 
 
-const isDeveloping = true;
-const port = isDeveloping ? 3000 : 5000;
+const isDeveloping = process.env.NODE_ENV;
+console.log(isDeveloping);
+const port = isDeveloping ? 3000 : process.env.PORT;
 const app = express();
 
 
 if (isDeveloping) {
   const compiler = webpack(config);
+  app.use(historyApiFallback({
+    verbose: false,
+  }));
   const middleware = webpackMiddleware(compiler, {
     publicPath: config.output.publicPath,
     contentBase: 'src',
@@ -25,18 +30,12 @@ if (isDeveloping) {
       chunkModules: false,
       modules: false,
     },
-    historyApiFallback: true,
   });
-
-  app.use(historyApiFallback({
-    verbose: false,
-  }));
 
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
   app.get('*', function response(req, res) {
-    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'index.html')));
-    res.end();
+    res.sendFile(path.join(__dirname, 'index.html'));
   });
 } else {
   app.use(express.static(__dirname + '/'));
