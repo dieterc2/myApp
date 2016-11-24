@@ -14,9 +14,12 @@ class App extends React.Component {
 
 class Header extends React.Component {
   render() {
+    const navColor = {
+      backgroundColor: "#00bcd4",
+    }
     return (
       <div>
-        <Navbar brand='oneyy' right>
+        <Navbar brand='Tuck Donald Frump' right style={navColor}>
           <NavItem href='/#/About'>About</NavItem>
         </Navbar>
       </div>
@@ -26,11 +29,14 @@ class Header extends React.Component {
 
 class Content extends React.Component{
     render() {
+      const navColor = {
+        backgroundColor: "#00bcd4",
+      }
       return (
         <div>
           <Slider>
             <Slide
-              src="http://lorempixel.com/580/250/nature/1"
+              src="http://cdn.wallpapersafari.com/50/6/lNGuM3.jpg"
               title="This is our big Tagline!">
               Here's our small slogan.
             </Slide>

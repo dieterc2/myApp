@@ -2,11 +2,11 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-   entry: './main.js',
+   entry: './src/main.js',
 
    output: {
       path: path.join(__dirname, '/'),
-      filename: 'index.js',
+      filename: 'public/index.js',
       publicPath: '/'
    },
 

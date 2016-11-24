@@ -8,9 +8,10 @@ const config = require('./webpack.config.js');
 const historyApiFallback = require('connect-history-api-fallback');
 
 
-const isDeveloping = process.env.NODE_ENV;
+const isDeveloping = process.env.NODE_ENV !== 'production';
 console.log(isDeveloping);
 const port = isDeveloping ? 3000 : process.env.PORT;
+console.log(port);
 const app = express();
 
 
@@ -35,12 +36,12 @@ if (isDeveloping) {
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
   app.get('*', function response(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
   });
 } else {
   app.use(express.static(__dirname + '/'));
   app.get('*', function response(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
   });
 }
 

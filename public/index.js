@@ -26496,12 +26496,15 @@
 	  _createClass(Header, [{
 	    key: 'render',
 	    value: function render() {
+	      var navColor = {
+	        backgroundColor: "#00bcd4"
+	      };
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
 	          _reactMaterialize.Navbar,
-	          { brand: 'TuckFrumpone', right: true },
+	          { brand: 'Tuck Donald Frump', right: true, style: navColor },
 	          _react2.default.createElement(
 	            _reactMaterialize.NavItem,
 	            { href: '/#/About' },
@@ -26527,6 +26530,9 @@
 	  _createClass(Content, [{
 	    key: 'render',
 	    value: function render() {
+	      var navColor = {
+	        backgroundColor: "#00bcd4"
+	      };
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -26536,7 +26542,7 @@
 	          _react2.default.createElement(
 	            _reactMaterialize.Slide,
 	            {
-	              src: 'http://lorempixel.com/580/250/nature/1',
+	              src: 'http://cdn.wallpapersafari.com/50/6/lNGuM3.jpg',
 	              title: 'This is our big Tagline!' },
 	            'Here\'s our small slogan.'
 	          ),
