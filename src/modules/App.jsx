@@ -19,7 +19,7 @@ class Header extends React.Component {
     }
     return (
       <div>
-        <Navbar brand='Tuck Donald Frump' right style={navColor}>
+        <Navbar brand='Title' right style={navColor}>
           <NavItem href='/#/About'>About</NavItem>
         </Navbar>
       </div>

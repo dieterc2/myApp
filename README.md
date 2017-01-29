@@ -1,11 +1,11 @@
-# myApp - React/Express/Webpack Light Pack
+# myApp - React/Express/Webpack Jumpstarter
 
 ### Dev
-Set `NODE_ENV` to dev and `PORT` to 3000.
+Set `NODE_ENV` to dev.
 
 Runs with:
 ```
-npm install 
+npm install
 npm start
 ```
 
@@ -18,4 +18,3 @@ npm install
 webpack
 npm start
 ```
-

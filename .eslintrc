@@ -1,3 +1,10 @@
 {
-  "extends": "airbnb"
+  "extends": "eslint-config-airbnb",
+    "ecmaFeatures": {
+        "jsx": true
+    },
+
+    "plugins": [
+        "react"
+    ]
 }
